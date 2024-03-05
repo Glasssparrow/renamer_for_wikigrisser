@@ -48,14 +48,6 @@ def renaming(old, new, to_be_changed="skill"):
         rename(f"{file_name}", f"{new_name}")
 
 
-# a = "Aaron"
-# b = "Aaaron"
-# a, b = b, a
-# for_print = choose_files(a, b, "hero")
-# print(for_print)
-# renaming(a, b, "hero")
-
-
 WINDOW_WIDTH = 600
 ENTRY_WIDTH = 100
 FOLDER_BUTTON_WIDTH = 50
