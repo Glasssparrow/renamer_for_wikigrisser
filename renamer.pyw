@@ -1,10 +1,11 @@
+# main imports
 from os import rename, listdir
 import os
-
+# imports for gui
 from tkinter import Button, Tk, Label, Entry
 from datetime import datetime
 
-INITIAL_DIR = os.getcwd()  # Начальная папка
+INITIAL_DIR = os.getcwd()
 HERO_FOLDERS = ["public\\hero cards", "public\\hero cards - skin", ]
 SKILL_FOLDERS = ["public\\skills", ]
 
