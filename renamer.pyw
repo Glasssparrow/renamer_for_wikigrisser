@@ -44,7 +44,6 @@ def renaming(old, new, to_be_changed="skill"):
     for file_name in files_list:
 
         new_name = edit_name(old, new, file_name)
-        directory = file_name[:-len(old)-5]
         rename(f"{file_name}", f"{new_name}")
 
 
