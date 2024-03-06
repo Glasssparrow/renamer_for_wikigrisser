@@ -26,7 +26,7 @@ def choose_files(old, new, to_be_changed="skill"):
                     edit_name(old, new, file) not in files_list
             ):
                 result.append(f"{INITIAL_DIR}\\{directory}\\{file}")
-        return result
+    return result
 
 
 def edit_name(old, new, filename, only_in_beginning=True):
