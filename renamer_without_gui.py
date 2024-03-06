@@ -61,6 +61,6 @@ def renaming(old, new, to_be_changed="skill"):
     return files_list
 
 
-files_list = renaming(sys.argv[1], sys.argv[2], sys.argv[3])
-for file in files_list:
+changed_files = renaming(sys.argv[1], sys.argv[2], sys.argv[3])
+for file in changed_files:
     print(file + "\n")
