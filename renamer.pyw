@@ -60,6 +60,7 @@ def renaming(old, new, to_be_changed="skill"):
     for file_name in files_list:
         new_name = edit_name(old, new, file_name)
         rename(file_name, new_name)
+    return files_list
 
 
 WINDOW_WIDTH = 600
@@ -90,21 +91,33 @@ class Gui:
     def _rename_hero(self):
         old = self._old_beginning.get()
         new = self._new_beginning.get()
-        renaming(old, new, "hero")
+        files = renaming(old, new, "hero")
         time = datetime.now()
         self._files_list.configure(
             text=f"Success! Time {str(time.hour)}:"
                  f"{str(time.minute)}:{str(time.second)}"
         )
+        text = "Changed files:\n"
+        for file in files:
+            text = f"{text}:skill:{file}\n"
+        self._files_list.configure(
+            text=f"{text}"
+        )
 
     def _rename_skill(self):
         old = self._old_beginning.get()
         new = self._new_beginning.get()
-        renaming(old, new, "skill")
+        files = renaming(old, new, "skill")
         time = datetime.now()
         self._files_list.configure(
             text=f"Success! Time {str(time.hour)}:"
                  f"{str(time.minute)}:{str(time.second)}"
+        )
+        text = "Changed files:\n"
+        for file in files:
+            text = f"{text}:skill:{file}\n"
+        self._files_list.configure(
+            text=f"{text}"
         )
 
     def __init__(self):
