@@ -18,7 +18,7 @@ SKILL_FOLDERS = [
 def choose_files(old: str, new: str, to_be_changed="skill"):
     """Get paths to the files, which starts with old.
     old - text we want to replace,
-    new – text we will replace it with,
+    new - text we will replace it with,
     to_be_changed - skill/hero."""
     if len(old) == 0:
         return []  # Search nothing if old == ""
